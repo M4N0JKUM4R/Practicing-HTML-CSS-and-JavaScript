@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --color-1: #ffc845;
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--color-1);
+  font-family: "Roboto";
+  display: grid;
+  place-items: center;
+}
+
+.jokes-container {
+  background: white;
+  padding: 2em;
+  width: 40em;
+  height: 20em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .jokes-container {
+    width: 80vw;
+  }
+}
+
+.jokes-container h1 {
+  text-align: center;
+}
+
+.jokes-container button {
+  width: 10em;
+  height: 3em;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background: var(--color-1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: pointer;
+}
+
+.delivery {
+  opacity: 0.7;
+}
