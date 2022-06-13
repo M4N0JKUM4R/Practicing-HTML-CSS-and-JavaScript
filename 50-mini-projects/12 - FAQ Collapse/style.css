@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --color-1: #e1e1e1;
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--color-1);
+  font-family: "Roboto";
+  display: grid;
+  justify-content: center;
+}
+
+.title {
+  padding-top: 2em;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.faq-box {
+  border: 1px solid gray;
+  margin: 2em 0;
+  font-size: 18px;
+  width: 600px;
+  border-radius: 5px;
+}
+
+.faq-box.active {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.faq-box .question {
+  padding: 1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-box .answer {
+  padding: 1em;
+  font-weight: normal;
+  transition: opacity ease 0.25s, padding ease-in-out 0.5s;
+  opacity: 1;
+  padding-top: 0;
+}
+
+.faq-box i {
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.faq-box .answer.collapse {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.close {
+  display: none;
+}
