@@ -78,12 +78,10 @@ label .letter {
 
 input + .label .letter {
   position: relative;
-
   top: 0px;
 }
 
 input:focus + .label .letter {
   position: relative;
-
   top: -10px;
 }
