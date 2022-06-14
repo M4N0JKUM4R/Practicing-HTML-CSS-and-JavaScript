@@ -28,6 +28,12 @@ body {
   margin: 2em 0;
 }
 
+@media (max-width: 600px) {
+  .container main {
+    grid-template-columns: 1fr;
+  }
+}
+
 .title {
   color: black;
   font-size: 2em;
