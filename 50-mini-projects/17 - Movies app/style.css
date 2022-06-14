@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --color: #0c1117;
+    --secondary: #5179ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    background: var(--color);
+}
+
+.container {
+    padding: 5em; 
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.movie-card {
+    background:var(--secondary);
+    box-shadow: 0 0px 5px 0px black;
+    transition: all ease-in-out 1s;
+    overflow: hidden;
+}
+
+.movie-title {
+    font-weight: bold;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+    transition: all ease-in-out 1s;
+}
+
+.movie-desc {
+    font-size: 1rem;
+    opacity: 0;
+    height: 0;
+    transform: translateY(0px);
+    transition: all ease-in-out 1s;
+    background-color: white;
+    color: white;
+}
+
+.movie-card:hover .movie-desc {
+    opacity: 100%;
+    transform: translateY(-200px);
+    background: white;
+}
+
+.movie-card:hover {
+    background-color: var(--secondary);
+    
+}
+
+.movie-card:hover .movie-title {
+    color: transparent;
+    
+}
+
+.movie-card:hover img {
+    opacity: 0.2;
+    transform: scale(1.75);
+    transition: all ease-in-out 1s;
+}
+
+.movie-card:hover .movie-votes {
+    opacity: 0;
+}
+
+.movie-image {
+    width: 100%;
+    transition: all ease-in-out 1s;
+}
+
+.movie-card .movie-content {
+    padding: 1em;
+}
+
+.movie-votes {
+    background: var(--color);
+    padding: 0.25em;
+    width: 2em;
+    text-align: center;
+    border-radius: 2px;
+    color: var(--secondary);
+    transition: all ease-in-out 1s;
+}
+
+.movie-votes.red {
+    color: red;
+}
+
+.movie-votes.orange {
+    color: orange;
+}
+
+.movie-votes.green {
+    color: green;
+}
+
+.search {
+    text-align: center;
+}
+
+.search input {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 1em;
+    background: var(--color);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 0 1em;
+    border-radius: 2px;
+    font-size: 24px;
+}
+
+.search input::placeholder {
+    color: var(--secondary);
+    transition: all ease-in-out 1s;
+}
+
+.search input:focus-visible {
+    outline: none;
+}
+
+.search input:focus-visible::placeholder {
+    opacity: 0.3;
+    transition: all ease-in-out 1s;
+}
+
+.no-show {
+    display: none;
+}
