@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto";
+  display: grid;
+  place-items: center;
+  color: black;
+  background: #16214d;
+}
+
+.container {
+  display: flex;
+  gap: 3em;
+}
+
+.box {
+  width: 350px;
+  height: 350px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/013/382/168/large/eugene-nesnov-.jpg?1539331681);
+  flex: 5;
+  background-size: cover;
+}
+
+.content {
+  flex: 5;
+  padding: 1em 2em 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.bottom-section {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.bottom-section .author-image {
+  max-width: 40px;
+  overflow: hidden;
+}
+
+.bottom-section .author-image img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: bold;
+}
+.date {
+  color: gray;
+  font-size: 0.75em;
+}
+
+.box.animated .header {
+  background-color: lightgray;
+  background-image: none;
+  position: relative;
+}
+
+.box.animated .header::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right, lightgray 0%, gray 50%, lightgray 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation-name: move-right;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  opacity: 0.1;
+}
+
+.box.animated .title {
+  background-color: lightgray;
+  color: transparent;
+  position: relative;
+}
+
+.box.animated .title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right, lightgray 0%, gray 50%, lightgray 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation-name: move-right;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  opacity: 0.1;
+}
+
+.box.animated .description {
+  background-color: lightgray;
+  color: transparent;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  position: relative;
+}
+
+.box.animated .description::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right, lightgray 0%, gray 50%, lightgray 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation-name: move-right;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  opacity: 0.1;
+}
+
+.box.animated .author-image {
+  background-color: lightgray;
+  background-image: none;
+  border-radius: 50%;
+  position: relative;
+}
+.box.animated .author-image::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to right, lightgray 0%, gray 50%, lightgray 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation-name: move-right;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  opacity: 0.2;
+}
+
+.box.animated .author-image img {
+  visibility: hidden;
+}
+
+.box.animated .author-details .author-name,
+.box.animated .author-details .date {
+  background-color: lightgray;
+  color: transparent;
+  position: relative;
+}
+
+.box.animated .author-details .author-name::after,
+.box.animated .author-details .date::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to right, lightgray 0%, gray 50%, lightgray 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation-name: move-right;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  opacity: 0.1;
+}
+
+@keyframes move-right {
+  0% {
+    left: 0;
+    position: absolute;
+  }
+
+  100% {
+    left: 100%;
+    position: absolute;
+  }
+}
