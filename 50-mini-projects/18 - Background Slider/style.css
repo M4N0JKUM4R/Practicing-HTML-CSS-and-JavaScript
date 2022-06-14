@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --color-1: #3494e4;
+  --color-2: #144fc6;
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--color-1);
+  font-family: "Roboto";
+  display: grid;
+  place-items: center;
+  color: white;
+  background-image: none;
+  transition: background-image ease-in-out 1s;
+  backdrop-filter: blur(5px);
+}
+
+.slider-container {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 80vw;
+  height: 80vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: none;
+  transition: all ease 0.5s;
+}
+
+.slider-container .btn {
+  font-size: 2em;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider-container .previous {
+  left: -1em;
+}
+
+.slider-container .next {
+  right: -1em;
+}
