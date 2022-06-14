@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --color-1: #7552cc;
+  --color-2: #f48924;
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto";
+  display: grid;
+  place-items: center;
+  color: black;
+  background: var(--color-1);
+}
+
+.button {
+  background: var(--color-2);
+  width: 200px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+span.circle {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  animation-name: scaleOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  transform: translate(-50%, -50%) scale(0);
+  position: absolute;
+}
+
+@keyframes scaleOut {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
