@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto";
+  display: grid;
+  place-items: center;
+  color: black;
+  background: #0099cc;
+}
+
+.container {
+  display: flex;
+  gap: 3em;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background: white;
+  overflow: hidden;
+}
+
+.box.in-zone {
+  background-color: gray;
+}
+
+.box img {
+  max-width: auto;
+}
+
+.fill {
+  cursor: grab;
+}
+
+.empty.hover {
+  background: gray;
+}
