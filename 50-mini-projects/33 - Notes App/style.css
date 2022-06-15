@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: #caccd1;
+  color: #111;
+}
+
+.container {
+  padding: 2em 0;
+  display: grid;
+  grid-gap: 0.25em;
+}
+
+.add-note {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 1em;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.note-header {
+  background: #52565e;
+  height: 40px;
+  padding: 0.5em 1em;
+  color: white;
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-end;
+  max-width: 25em;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3em;
+  padding: 2em;
+}
+
+@media (max-width: 600px) {
+  .notes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.note textarea {
+  width: 100%;
+  min-height: 200px;
+  max-height: 500px;
+  min-width: 30em;
+  max-width: 30em;
+  padding: 1em;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-family: "Roboto";
+}
+
+.delete-icon,
+.edit-icon {
+  cursor: pointer;
+}
