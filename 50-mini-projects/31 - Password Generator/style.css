@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --color: #3369e7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: var(--color);
+}
+
+.password-box {
+    background: white;
+    padding: 2em;
+    max-width: 30em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0px grey;
+    transition: all ease-in-out 5s;
+}
+
+.password-box .generated-password {
+    background: rgba(51,105,231,0.9);
+    padding: 1em;
+    border-radius: 5px;
+    color: white;
+}
+
+.password-box input[type="number"] {
+    width: 100px;
+    padding-left: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+.password-box .input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 20em;
+    margin-bottom: 0.5em;
+}
+
+.password-box .error {
+    border: 1px solid red;
+    transition: all ease-in-out 0.5s;
+}
+
+.inputs {
+    margin: 2em 0;
+}
+
+#generate-password {
+    width: 100%;
+    background: var(--color);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+    padding: 1em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-strength-meter {
+    background: lightgrey;
+    width: 100%;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: 1em;
+}
+
+.strength {
+    width: 50%;
+    background: transparent;
+    height: 10px;
+}
+
+.strength.low {
+    width: 25%;
+    background: red;
+}
+
+.strength.medium {
+    width: 50%;
+}
+
+.strength.high {
+    width: 75%;
+}
+
+.strength.strong {
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+           <div class="password-box">
+               <div class="generated-password">
+                    21213&#*7%#
+               </div>
+               <div class="password-strength-meter">
+                   <div class="strength"></div>
+               </div>
+               <div class="inputs">
+                   <div class="input">
+                        <label for="password-length">Password Length</label>
+                        <input type="number" min="0" max="30" name="password-length" />
+                   </div>
+                   <div class="input">
+                        <label for="uppercase-input">Contains Uppercase Letters</label>
+                        <input type="checkbox" name="uppercase-input" />
+                    </div>
+                    <div class="input">
+                        <label for="lowercase-input">Contains Lowercase Letters</label>
+                        <input type="checkbox" name="lowercase-input" />
+                    </div>
+                    <div class="input">
+                        <label for="number-input">Contains Numbers</label>
+                        <input type="checkbox" name="number-input" />
+                    </div>
+                    <div class="input">
+                        <label for="symbol-input">Contains Symbols</label>
+                        <input type="checkbox" name="symbol-input" />
+                    </div>
+                    
+               </div>
+               <button id="generate-password">Generate Password</button>
+           </div>
+        </div>
+    </body>
+</html>
