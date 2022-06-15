@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+:root {
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Press Start 2P";
+  color: black;
+  background: #516dff;
+  overflow: hidden;
+}
+
+.container {
+  padding: 2em 0;
+}
+
+.start-screen {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-gap: 2em;
+  color: white;
+  transform: none;
+  transition: all ease 2s;
+}
+
+.start-screen button {
+  align-self: flex-start;
+  font-family: "Press Start 2P";
+  padding: 1em;
+  cursor: pointer;
+  color: #516dff;
+}
+
+.start-screen h1 {
+  align-self: flex-end;
+  color: white;
+}
+
+.selection-screen {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  grid-gap: 5em;
+  color: white;
+  transform: none;
+  transition: all ease 2s;
+}
+
+.insects-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50vw;
+  gap: 1em;
+  align-self: flex-start;
+}
+
+.selection-screen h1 {
+  align-self: flex-end;
+}
+
+.insects-container .insect {
+  flex: 1;
+  cursor: pointer;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.insect:hover {
+  background-color: white;
+}
+
+.insects-container img {
+  max-width: 75%;
+}
+
+.game-screen {
+  height: 100vh;
+  color: white;
+  transition: all ease 2s;
+  padding: 2em;
+}
+
+.move-up {
+  transform: translateY(-100vh);
+}
+
+.move-up-2x {
+  transform: translateY(-200vh);
+}
+
+.move-up-3x {
+  transform: translateY(-300vh);
+}
+
+.game-screen .details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.insect-game {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+
+.insect-game img {
+  max-width: 100%;
+  cursor: pointer;
+}
