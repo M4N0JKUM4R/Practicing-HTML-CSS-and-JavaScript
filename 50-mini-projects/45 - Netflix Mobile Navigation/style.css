@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --color-1: #e50914;
+  --color-2: rgb(34 31 31);
+}
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto";
+  color: black;
+  background: white;
+  overflow: hidden;
+}
+
+.container {
+  padding: 2em 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.netflix-logo svg {
+  width: 100px;
+  height: 100px;
+  fill: #e50914;
+}
+
+.description {
+  text-align: center;
+}
+
+.menu-toggle {
+  position: absolute;
+  left: 2em;
+  top: 2em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menus {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -200px;
+}
+
+.menu {
+  width: 400px;
+  height: 100%;
+  position: relative;
+  background: var(--color-1);
+  position: absolute;
+  top: 0;
+}
+
+.dark-menu {
+  background: var(--color-2);
+  position: absolute;
+  left: -300px;
+  transition: left ease 1s;
+}
+
+.red-menu {
+  background: var(--color-1);
+  left: -350px;
+  transition: left ease 1s;
+}
+
+.white-menu {
+  background: white;
+  left: -400px;
+  transition: left ease 1s;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.white-menu .top-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.white-menu .logo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 40px;
+  fill: var(--color-1);
+  cursor: pointer;
+}
+
+.white-menu ul {
+  list-style-type: none;
+}
+
+.white-menu li {
+  margin: 1em 0;
+}
+.dark-menu.active {
+  left: 250px;
+}
+
+.red-menu.active {
+  left: 200px;
+}
+
+.white-menu.active {
+  left: 150px;
+}
+
+.close-icon {
+  cursor: pointer;
+  background: gray;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
