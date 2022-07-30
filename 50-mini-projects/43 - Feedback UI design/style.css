@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto";
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #ffe000, #799f0c);
+}
+
+.container {
+  background: white;
+  padding: 2em;
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+  max-width: 75%;
+  justify-content: center;
+  display: flex;
+}
+
+.header-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  cursor: pointer;
+  width: 60px;
+}
+
+.feedback.selected {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.smiley {
+  font-size: 2em;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease 1s;
+  border-color: transparent;
+}
+
+button.disabled {
+  background: gray;
+  cursor: none;
+}
+
+.footer {
+  text-align: center;
+}
