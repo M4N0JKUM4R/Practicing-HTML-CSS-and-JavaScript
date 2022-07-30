@@ -5,6 +5,8 @@ passwordEl.addEventListener("input", (e) => {
   passScore(e.target.value);
 });
 
+// Logic partially based on http://jsfiddle.net/HFMvX/ which would not pass the pattern test. There are other methods to implement: https://www.npmjs.com/package/check-password-strength
+
 function passScore(value) {
   let score = 0;
   const valueArray = value.split("");
