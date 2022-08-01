@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto";
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #1488cc, #2b32b2);
+}
+
+.container {
+  display: flex;
+  width: 750px;
+  height: 400px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container canvas {
+  width: 70%;
+  /* cursor: url("paintbrush-solid.svg"), auto; */
+}
+
+.container > .toolbar {
+  width: 30%;
+  border-left: 1px solid lightgray;
+  padding: 1em;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.toolbar .objects {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+}
+
+.objects > div {
+  width: 25px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  display: grid;
+  padding: 0.5em;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+}
+
+input.font-size-input {
+  width: 30px;
+  padding: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 12px;
+}
+
+/* From Github */
+
+button {
+  appearance: none;
+  background-color: #1488cc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: all ease 1s;
+}
+
+button:hover {
+  background-color: #2b32b2;
+}

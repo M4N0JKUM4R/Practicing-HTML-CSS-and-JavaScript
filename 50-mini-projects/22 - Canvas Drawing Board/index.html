@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="canvas" width="525" height="400"></canvas>
+        <div class="toolbar">
+            <div class="settings">
+                <div class="title">Settings</div>
+                <div class="font-size">
+                    <label>Brush Size</label>
+                    <input class="font-size-input" type="number" value="3" />
+                </div>
+                <div class="color">
+                    <label>Color</label>
+                    <div class="input">
+                        <input class="color-input" type="color" />
+                    </div>
+                </div>
+                <div class="type">
+                    <label>Type of object</label>
+                    <div class="objects">
+                        <div class="circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z" />
+                            </svg></div>
+                        <div class="line"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z" />
+                            </svg></div>
+                    </div>
+
+                </div>
+                <div class="reset">
+                    <button>Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
