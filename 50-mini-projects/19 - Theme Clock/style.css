@@ -184,6 +184,7 @@ body.dark {
 .hours .mark:nth-child(5)::after {
   content: "4";
   display: block;
+  transform: rotate(180deg);
 }
 
 .hours .mark:nth-child(5)::before {
@@ -201,6 +202,7 @@ body.dark {
 .hours .mark:nth-child(6)::after {
   content: "5";
   display: block;
+  transform: rotate(180deg);
 }
 
 .hours .mark:nth-child(6)::before {
@@ -222,7 +224,6 @@ body.dark {
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: rotate(10deg);
   transform-origin: right;
 }
 
@@ -233,7 +234,6 @@ body.dark {
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: rotate(30deg);
   transform-origin: right;
 }
 

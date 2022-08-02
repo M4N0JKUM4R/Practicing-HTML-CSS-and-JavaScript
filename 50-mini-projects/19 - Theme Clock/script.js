@@ -25,7 +25,9 @@ function updateTime() {
 
   let secondDeg = (seconds * 6 + ADJUST_DEG) % 360;
   let minuteDeg = (minutes * 6 + ADJUST_DEG) % 360;
-  let hourDeg = (hours * 12 * HOUR_RATIO + (minuteDeg % 30) + ADJUST_DEG) % 360;
+  let hourDeg = hours * 30 + (minuteDeg - ADJUST_DEG) / 12 + ADJUST_DEG;
+
+  console.log(hourDeg);
 
   if (hours > 12) {
     hours = hours % 12;
