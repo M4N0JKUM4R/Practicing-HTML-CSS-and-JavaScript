@@ -15,17 +15,17 @@ themeSwitcherBtn.addEventListener("click", () => {
 
 let meridian;
 
+let date = new Date();
+
 function updateTime() {
   date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
 
-  console.log(hours);
-
   let secondDeg = (seconds * 6 + ADJUST_DEG) % 360;
   let minuteDeg = (minutes * 6 + ADJUST_DEG) % 360;
-  let hourDeg = (hours * 12 * HOUR_RATIO + minuteDeg / 60 + ADJUST_DEG) % 360;
+  let hourDeg = (hours * 12 * HOUR_RATIO + (minuteDeg % 30) + ADJUST_DEG) % 360;
 
   if (hours > 12) {
     hours = hours % 12;
@@ -100,11 +100,14 @@ function updateClock(secondDeg, minuteDeg, hourDeg) {
   hourHandEl.style.transform = `rotate(${hourDeg}deg)`;
 }
 
-let audioText = soundEnabled ? "On" : "Off";
-audioEl.innerText = `Sound: ${audioText}`;
+function updateAudioText() {
+  let audioText = soundEnabled ? "On" : "Off";
+  audioEl.innerText = `Sound: ${audioText}`;
+}
+
+updateAudioText();
 
 audioEl.addEventListener("click", () => {
   soundEnabled = !soundEnabled;
-  audioText = soundEnabled ? "On" : "Off";
-  audioEl.innerText = `Sound: ${audioText}`;
+  updateAudioText();
 });
